@@ -6,6 +6,6 @@ script:
 deploy:
   provider: releases
   skip_cleanup: true
-  file: target/git.support-1.0.0-plugin.jar
+  file: target/travis-ci-tutorial-java-0.0.1-SNAPSHOT.jar
   on:
     tags: true
