@@ -10,7 +10,6 @@ before_script:
   - chmod +x travis/checkForTag.sh
   - git config credential.helper "store --file=.git/credentials"
   - echo "https://${GH_TOKEN}:@github.com" > .git/credentials
-  - mvn --batch-mode release:update-versions -DdevelopmentVersion=${TRAVIS_TAG}
 script:
  -./travis/checkForTag.sh
  - mvn clean install
