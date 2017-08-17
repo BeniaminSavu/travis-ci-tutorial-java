@@ -7,4 +7,4 @@ echo "$msg" >> build.txt;
 git status;
 git add build.txt;
 git commit -m "rebuild pages at ${rev}";
-git push -v;
+git push origin HEAD:master;
