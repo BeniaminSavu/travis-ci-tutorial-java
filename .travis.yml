@@ -4,7 +4,7 @@ jdk:
  - oraclejdk8
 env:
  global:
-   - GIT_NAME: BeniaminSavu
+   - GIT_NAME: Beniamin Savu
    - GIT_EMAIL: benisavu@gmail.com
    - TRAVIS_REPO_SLUG: BeniaminSavu/travis-ci-tutorial-java
    - GIT_BRANCH: master
