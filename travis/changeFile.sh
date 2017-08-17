@@ -8,5 +8,6 @@ msg="Tag Generated from TravisCI for build $TRAVIS_BUILD_NUMBER";
 echo "$msg" >> build.txt;
 git status;
 git add build.txt;
+git status;
 git commit -m "rebuild pages at ${rev}";
 git push origin HEAD:master;
