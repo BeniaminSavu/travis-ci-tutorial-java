@@ -1,16 +1,12 @@
 rev=$(git rev-parse --short HEAD)
 
-REPONAME=`basename $PWD`
-PARENTDIR=`dirname $PWD`
-USERNAME=`basename $PARENTDIR`
-
 cd out
 
 git init
-git config user.name "Beniamin Savu"
+git config user.name "BeniaminSavu"
 git config user.email "benisavu@gmail.com"
 
-git remote add upstream "https://$GH_TOKEN@github.com/$USERNAME/$REPONAME.git"
+git remote add upstream "https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git"
 git fetch upstream
 git reset upstream/master
 
@@ -22,4 +18,4 @@ git status
 
 git add -A .
 git commit -m "rebuild pages at ${rev}"
-git push -q upstream HEAD:master
+git push -q upstream HEAD:refs/heads/master
