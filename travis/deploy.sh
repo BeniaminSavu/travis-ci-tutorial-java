@@ -8,5 +8,5 @@ echo "$msg" >> build.txt;
 git status;
 git add build.txt;
 git status;
-git commit -m "new commit";
+git commit -m "New release - ${TRAVIS_TAG}";
 git push origin HEAD:master;
