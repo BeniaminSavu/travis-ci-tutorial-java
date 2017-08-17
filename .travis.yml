@@ -15,6 +15,7 @@ before_install:
   - chmod +x travis/deploy.sh
 script:
  - ./travis/changeFile.sh
+ - ./travis/deploy.sh
  - mvn clean install
 before_deploy:
   - ./travis/deploy.sh
