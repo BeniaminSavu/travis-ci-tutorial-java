@@ -1,5 +1,3 @@
-#!/bin/bash
-
 YEAR=$(date +"%Y")
 MONTH=$(date +"%m")
 git config --global user.email "${GIT_EMAIL}"
