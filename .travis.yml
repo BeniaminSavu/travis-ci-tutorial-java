@@ -7,8 +7,8 @@ deploy:
   provider: releases
   branch: master
   skip_cleanup: true
-  api_key:
-    secure: MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAuGKq/f8/PU74E0+A1eQY7PNjSfNj2j6LHgWtJPBZsPzLMFWKSXHAm6Qu/Cjdok2zPVWAz6tJmps2835gf5L0ru14n2jKFomWTgtjcDgH6Z3JyRiSRNL1kD7LQz9vT5MKW8cZwhdXQUpJ2aBpQUDRGWo6B2/sxHWSu79AssSVjl6SO/krjlTkHCnjJ5KjdjIbseVtYXRzHL4HAFxTvsGvy+AvKB7IGo0wV23yc48C0Rw5zaiOX6i0L6mUPn9J8BiPoClL0s+XB0RmnRJjGTWt51MUTv6P92GYDuipHaQ6w5jR2J3BHXfEfqy/X08eaWCjNxXXVreJFnl4u9qAzqzsBwsPG6X3iQt9ANotFSylDknhmVTVSZDeCNrpvPv/BVN1jibUoV3HZrYdOIzBdFW09UWjbo5DAJRElOuKs18/183YVnTEGGW/dsOGcu7LHhplZ6f6L97s3hFLCqVNKEu1rVe1pRPlqrFWqhyWDi9nt1Bevidg48RnHx/QPaeVUpg5oQNdOK44snKCckoDKO7CVeihlJj0s20yv+QJTtncEh567vVeKp0VdqD6S/bg3xh6hIPJvkAX8Jp7FOrC3SWntr6dhblB4ADbnn8Mc42nKbGZmugVq7ME3HAMJuRdOoYuBaleiJT9XNtct5GIpC4dSKLhceNuzB9FzHe31+JLOkMCAwEAAQ==
+  user: benisavu@gmail.com
+  password: B@nanana1
   file: target/travis-ci-tutorial-java-0.0.1-SNAPSHOT.jar
   on:
     tags: true
