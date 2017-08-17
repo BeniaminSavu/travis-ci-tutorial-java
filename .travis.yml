@@ -2,12 +2,6 @@ language: java
 sudo: required
 jdk:
  - oraclejdk8
-env:
- global:
-   - GIT_NAME: BeniaminSavu
-   - GIT_EMAIL: benisavu@gmail.com
-   - TRAVIS_REPO_SLUG: BeniaminSavu/travis-ci-tutorial-java
-   - GIT_BRANCH: master
 matrix:
   fast_finish: true
 install: true
@@ -15,15 +9,15 @@ before_script:
   - chmod +x travis/changeFile.sh
   - git config credential.helper "store --file=.git/credentials"
   - echo "https://${GH_TOKEN}:@github.com" > .git/credentials
+  - mvn --batch-mode release:update-versions -DdevelopmentVersion=${TRAVIS_TAG}
 script:
- - ./travis/changeFile.sh
  - mvn clean install
 before_deploy:
-  - ./travis/changeFile.sh
+  - ./travis/deploy.sh
 deploy:
   provider: releases
   api_key: ${GH_TOKEN}
-  file: target/travis-ci-tutorial-java-0.0.1-SNAPSHOT.jar
+  file: target/travis-ci-tutorial-java-${TRAVIS_TAG}.jar
   skip_cleanup: true
   on:
     tags: true
