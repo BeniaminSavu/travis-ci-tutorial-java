@@ -10,6 +10,9 @@ env:
    - GIT_BRANCH: master
 matrix:
   fast_finish: true
+before_install:
+  - chmod +x travis/changeFile.sh
+  - chmod +x travis/deploy.sh
 script:
  - ./travis/changeFile.sh
  - mvn clean install
