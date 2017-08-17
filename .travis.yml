@@ -13,6 +13,9 @@ matrix:
 install: true
 before_script:
   - chmod +x travis/changeFile.sh
+  - git config credential.helper "store --file=.git/credentials"
+  - echo "https://${GH_TOKEN}:@github.com" > .git/credentials
+  - node ./node_modules/grunt-cli/bin/grunt release
 script:
  - ./travis/changeFile.sh
  - mvn clean install
