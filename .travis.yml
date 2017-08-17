@@ -5,7 +5,7 @@ script:
  - mvn clean install
 deploy:
   provider: releases
-  api_key: b777b89be7348537b7adb804fda0e4b3184def4b
+  api_key: 127e5ff4de9eab61afec4cfca2f3d494992653c6
   file: target/travis-ci-tutorial-java-0.0.1-SNAPSHOT.jar
   skip_cleanup: true
   on:
