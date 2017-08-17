@@ -1,18 +1,11 @@
 language: java
 jdk:
  - oraclejdk8
-before_script:
-  - composer self-update -q
-  - if [ -n "$GH_TOKEN" ]; then composer config github-oauth.github.com ${GH_TOKEN}; fi;
-  - if [ -z "$dependencies" ]; then composer install; fi;
-  - if [ "$dependencies" = "lowest" ]; then composer update --prefer-lowest -n; fi;
-  - if [ "$dependencies" = "highest" ]; then composer update -n; fi;
-  - composer show -i
 script:
  - mvn clean install
 deploy:
   provider: releases
-  api_key: 127e5ff4de9eab61afec4cfca2f3d494992653c6
+  api_key: ${GH_TOKEN}
   file: target/travis-ci-tutorial-java-0.0.1-SNAPSHOT.jar
   skip_cleanup: true
   on:
