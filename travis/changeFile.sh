@@ -7,4 +7,5 @@ export GIT_TAG=V2.$YEAR-$MONTH.$TRAVIS_BUILD_NUMBER
 msg="Tag Generated from TravisCI for build $TRAVIS_BUILD_NUMBER"
 echo "$msg" >> $TRAVIS_BUILD_DIR/build.txt
 git add $TRAVIS_BUILD_DIR/build.txt
+git status
 git commit -m "Update build version file with $TRAVIS_BUILD_NUMBER"
