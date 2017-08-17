@@ -11,4 +11,4 @@ if git tag $GIT_TAG -a -m "$msg" 2>/dev/null; then
 git tag $GIT_TAG -a -m "Tag Generated from TravisCI for build $TRAVIS_BUILD_NUMBER"
 git push origin master && git push origin master --tags
 ls -aR
-else echo Tag already exists!; fi
+else echo Tag already exists! fi
