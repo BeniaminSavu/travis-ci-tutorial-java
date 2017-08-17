@@ -1,6 +1,5 @@
 git config user.name "${GIT_NAME}"
 git config user.email "${GIT_EMAIL}"
-
 msg="Tag Generated from TravisCI for build $TRAVIS_BUILD_NUMBER"
 echo "$msg" >> build.txt
 git add build.txt
