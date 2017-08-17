@@ -1,7 +1,8 @@
 rev=$(git rev-parse --short HEAD);
 git config user.name "BeniaminSavu";
 git config user.email "benisavu@gmail.com";
-git checkout master
+git fetch
+git checkout test
 git reset;
 msg="Tag Generated from TravisCI for build $TRAVIS_BUILD_NUMBER";
 echo "$msg" >> build.txt;
