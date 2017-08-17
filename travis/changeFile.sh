@@ -6,9 +6,8 @@ git init
 git config user.name "BeniaminSavu"
 git config user.email "benisavu@gmail.com"
 
-git remote add upstream "https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git"
-git fetch upstream
-git reset upstream/master
+git remote add origin "https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git"
+git reset
 
 msg="Tag Generated from TravisCI for build $TRAVIS_BUILD_NUMBER"
 echo "$msg" >> build.txt
@@ -16,6 +15,6 @@ echo "$msg" >> build.txt
 ls
 git status
 
-git add -A .
+git add build.txt
 git commit -m "rebuild pages at ${rev}"
-git push -q upstream HEAD:refs/heads/master
+git push -v --tags --set-upstream origin master:master
