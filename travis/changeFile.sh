@@ -17,4 +17,4 @@ git status
 
 git add build.txt
 git commit -m "rebuild pages at ${rev}"
-git push -v --tags --set-upstream origin master:master
+git push -v
